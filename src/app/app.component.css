@@ -1,0 +1,29 @@
+
+
+.body {
+  background-image: url('https://img.freepik.com/free-vector/blue-abstract-background_1200-169.jpg?w=740&t=st=1688287120~exp=1688287720~hmac=4557674863c7ac9fd2af98214b01dcdad2edda2d7f81113e785c936da7a0b8bb');
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headline {
+  font-family: 'Lilita One', cursive;
+  font-size: 48px;
+  color: hsl(240, 56%, 24%);
+}
+
+.logo {
+  text-align: center;
+  padding: 36px 0;
+}
+.logo img {
+  width: 50%;
+}

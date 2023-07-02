@@ -1,0 +1,27 @@
+
+<br /><br />
+<div class="login">
+<form [formGroup]="loginForm" class="login-form">
+<input
+type="text"
+formControlName="login"
+[ngClass]="{
+  'invalid-input': loginForm.get('login').invalid && zatwierdzClicked
+}"
+/>
+
+<input
+type="password"
+formControlName="haslo"
+[ngClass]="{
+  'invalid-input': loginForm.get('haslo').invalid && zatwierdzClicked
+}"
+/>
+
+<button (click)="logIn()" [disabled]="!loginForm.valid">Zaloguj sie</button>
+</form>
+<div *ngIf="zatwierdzClicked">Nieprawidłowe dane</div>
+</div>
+<app-wyszukiwarka></app-wyszukiwarka>
+
+<footer>Dane do logowania znajdują się w folderze assets/employees.json!!!</footer>

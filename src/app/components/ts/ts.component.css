@@ -1,0 +1,25 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+.login .login-form input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.invalid-input {
+  border: 1px solid red;
+}
+button[disabled] {
+  padding: 3px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  background-color: #cccccc;
+  color: #666666;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  background-image: url('https://img.freepik.com/free-vector/blue-abstract-background_1200-169.jpg?w=740&t=st=1688287120~exp=1688287720~hmac=4557674863c7ac9fd2af98214b01dcdad2edda2d7f81113e785c936da7a0b8bb');
+  background-size: cover;
+}

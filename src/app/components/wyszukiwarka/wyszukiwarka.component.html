@@ -1,0 +1,119 @@
+<div class="lecimy">
+  <form [formGroup]="nazwaFormularza">
+    <h4>Lecę z</h4>
+    <select formControlName="wybranaOpcja1" (change)="blokujOpcje1()">
+      <option disabled selected value="">Wybierz skąd chcesz lecieć</option>
+      <option
+        *ngFor="let airport of flightFrom"
+        [disabled]="airport.disabled"
+        [value]="airport.code"
+      >
+        {{ airport.city }}
+      </option>
+    </select>
+
+    Wylot w dniu:
+    <input
+      type="date"
+      [min]="minDate1"
+      (change)="updateMinDate()"
+      formControlName="departure"
+    />
+
+    <h4>Lecę do</h4>
+    <select formControlName="wybranaOpcja2" (change)="blokujOpcje2()">
+      <option disabled selected value="">Wybierz dokąd chcesz lecieć</option>
+
+      <option
+        *ngFor="let airport of flightTo"
+        [disabled]="airport.disabled"
+        [value]="airport.code"
+      >
+        {{ airport.city }}
+      </option>
+    </select>
+
+    Odlot w dniu:
+    <input
+      type="date"
+      [min]="minDate2"
+      (change)="updateMinDate2()"
+      formControlName="arrive"
+    />
+
+    <hr class="horizontal-line" />
+
+    <div>
+      <!-- <label><h4>Ile osób</h4></label> -->
+
+      <div style="text-align: center">
+        <h4>Wybierz liczbe osób lecących</h4>
+
+        <div style="display: grid; grid-template-columns: repeat(4,1fr)">
+          <select
+            formControlName="people"
+            class="form-list adults"
+            (change)="peopleToFlight()"
+          >
+            <option disabled selected value="">
+              Wybierz liczb osób dorosłych
+            </option>
+
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+
+            <option value="3">3</option>
+
+            <option value="4">4</option>
+
+            <option value="5">5</option>
+          </select>
+
+          <select
+            formControlName="olderChildren"
+            class="form-list olderChildren"
+            (change)="peopleToFlight()"
+          >
+            <option disabled selected value="">Wybierz liczb osób 3-13</option>
+
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+
+            <option value="3">3</option>
+
+            <option value="4">4</option>
+
+            <option value="5">5</option>
+          </select>
+
+          <select
+            formControlName="children"
+            class="form-list children"
+            (change)="peopleToFlight()"
+          >
+            <option disabled selected value="">
+              Wybierz liczb dzieci poniżej 3 lat
+            </option>
+
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+
+            <option value="3">3</option>
+
+            <option value="4">4</option>
+
+            <option value="5">5</option>
+          </select>
+
+          <button (click)="zatwierdz()" class="form-list commit">
+            Zatwierdź
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- {{ nazwaFormularza.valid | json }} -->

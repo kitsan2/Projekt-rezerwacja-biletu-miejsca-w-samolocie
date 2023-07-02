@@ -1,0 +1,30 @@
+.lecimy {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-image: url('https://img.freepik.com/free-vector/blue-abstract-background_1200-169.jpg?w=740&t=st=1688287120~exp=1688287720~hmac=4557674863c7ac9fd2af98214b01dcdad2edda2d7f81113e785c936da7a0b8bb');
+  background-size: cover;
+}
+.lecimy h4 {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+.lecimy .horizontal-line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form-list {
+  margin: 5px;
+}
+select {
+  padding: 3px;
+}
+.commit {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  background-color: tomato;
+  color: navy;
+  border: 0px solid tomato;
+  border-radius: 4px;
+}

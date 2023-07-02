@@ -1,0 +1,13 @@
+<p>wybor-miejsca works!</p>
+
+<select (change)="miejsceWybrane($event)" multiple>
+  <option value="" disabled="true">Wybierz swoje miejsce</option>
+  <option
+    *ngFor="let item of daneMiejsc"
+    [value]="item.name"
+    [disabled]="item.disable"
+  >
+    {{ item.name }}
+  </option>
+</select>
+{{ wybraneMiejsce }}
